@@ -16,6 +16,6 @@ plugins:
   - "@typescript-eslint"
 rules:
   "@typescript-eslint/consistent-type-imports":
-    - "error"
+    - error
     - fixStyle: separate-type-imports
-  "@typescript-eslint/switch-exhaustiveness-check": "error"
+  "@typescript-eslint/switch-exhaustiveness-check": error
