@@ -22,10 +22,25 @@ jobs:
         with:
           cache: pnpm
           node-version: 21
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+
+      - uses: actions/setup-node@v3
+        with:
           registry-url: https://npm.pkg.github.com
           scope: "@natoboram"
-      - run: pnpm install
-      - run: pnpm build
       - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: https://registry.npmjs.org
+          scope: "@natoboram"
+      - run: pnpm publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+
+      - run: gh release create '${{ github.ref_name }}' --generate-notes --title '${{ github.ref_name }}' --verify-tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
