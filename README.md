@@ -2,6 +2,7 @@
 
 The most gigachad project setup for TypeScript.
 
+- Dependency updates with [Dependabot](https://github.com/dependabot/dependabot-core)
 - Documentation with [TypeDoc](https://github.com/TypeStrong/typedoc)
 - Enforce format-on-save in [VSCode](https://github.com/microsoft/vscode)
 - Formatting with [Prettier](https://github.com/prettier/prettier)
