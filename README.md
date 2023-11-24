@@ -1,5 +1,7 @@
 # `gigachad.ts`
 
+[![GitHub Pages](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-pages.yaml) [![Node.js CI](https://github.com/NatoBoram/gigachad.ts/actions/workflows/node.js.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/node.js.yaml)
+
 The most gigachad project setup for TypeScript.
 
 - Dependency updates with [Dependabot](https://github.com/dependabot/dependabot-core)
