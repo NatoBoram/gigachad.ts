@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: America/Toronto
+    commit-message:
+      prefix: "⬆️ "
+    groups:
+      patch:
+        update-types:
+          - patch
+      eslint:
+        patterns:
+          - "*eslint*"
+      typescript:
+        patterns:
+          - "*typescript*"
+          - tsx
+          - typedoc
