@@ -11,6 +11,7 @@ The most gigachad project setup for TypeScript.
 - Enforce format-on-save in [VSCode](https://github.com/microsoft/vscode)
 - Formatting with [Prettier](https://github.com/prettier/prettier)
 - Linting with [ESLint](https://github.com/eslint/eslint)
+- Package management with [PNPM](https://github.com/pnpm/pnpm)
 - Publish it with a GitHub Workflow
 - Run it with [`tsx`](https://github.com/privatenumber/tsx)
 - Unit tests with [Vitest](https://github.com/vitest-dev/vitest)
