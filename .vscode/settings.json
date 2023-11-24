@@ -1,0 +1,20 @@
+{
+	"[github-actions-workflow][javascript][json][jsonc][markdown][typescript][xml][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.minimap.maxColumn": 80,
+		"editor.rulers": [80]
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "always",
+		"source.fixAll.markdownlint": "always",
+		"source.organizeImports": "always"
+	},
+	"editor.formatOnSave": true,
+	"explorer.fileNesting.patterns": {
+		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map",
+		"*.ts": "${capture}.test.ts, ${capture}.test.ts.map",
+		".env": ".env.*",
+		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
+		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo"
+	}
+}

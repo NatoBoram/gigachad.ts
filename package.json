@@ -1,0 +1,65 @@
+{
+	"name": "@natoboram/gigachad.ts",
+	"version": "0.0.0",
+	"description": "The most gigachad project setup for TypeScript.",
+	"keywords": [
+		"eslint",
+		"gigachad",
+		"prettier",
+		"project-template",
+		"typescript",
+		"vitest"
+	],
+	"homepage": "https://github.com/NatoBoram/gigachad.ts",
+	"bugs": {
+		"url": "https://github.com/NatoBoram/gigachad.ts/issues"
+	},
+	"license": "Unlicense",
+	"author": {
+		"name": "Nato Boram",
+		"url": "https://github.com/NatoBoram"
+	},
+	"funding": [
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/NatoBoram"
+		},
+		{
+			"type": "individual",
+			"url": "https://paypal.me/NatoBoram/5"
+		}
+	],
+	"files": [
+		"dist",
+		"!dist/**/*.test.*"
+	],
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"bin": "dist/main.js",
+	"repository": "github:NatoBoram/gigachad.ts",
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsx ./src/main.ts",
+		"docs": "typedoc",
+		"format": "prettier --write .",
+		"lint": "eslint . && prettier --check .",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.12.0",
+		"@typescript-eslint/parser": "^6.12.0",
+		"eslint": "^8.54.0",
+		"eslint-config-prettier": "^9.0.0",
+		"prettier": "^3.1.0",
+		"typedoc": "^0.25.3",
+		"typescript": "~5.2.2",
+		"vitest": "^0.34.6"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"type": "module"
+}

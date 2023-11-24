@@ -1,0 +1,41 @@
+name: Node.js Patch
+
+on: workflow_dispatch
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ssh-key: "${{ secrets.SIGNING_KEY_PRIVATE }}"
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          cache: pnpm
+          node-version: 21
+      - name: Configure Git, patch, release and push
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git config gpg.format ssh
+          git config user.signingkey 'key::${{ secrets.SIGNING_KEY_PUBLIC }}'
+
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.SIGNING_KEY_PRIVATE }}'
+
+          VERSION=$(pnpm version patch)
+
+          git push
+          git push --tags
+
+          gh release create $VERSION --generate-notes --title $VERSION --verify-tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
