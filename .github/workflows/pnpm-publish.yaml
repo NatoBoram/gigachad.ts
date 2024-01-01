@@ -41,6 +41,14 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
-      - run: gh release create '${{ github.ref_name }}' --generate-notes --title '${{ github.ref_name }}' --verify-tag
+      - run: pnpm pack --pack-gzip-level 9
+      - name: Sign
+        run: |
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.SIGNING_KEY_PRIVATE }}'
+          echo '${{ vars.SIGNING_KEY_PUBLIC }}' > '${{ runner.temp }}/SIGNING_KEY_PUBLIC.pub'
+          ssh-keygen -Y sign -f '${{ runner.temp }}/SIGNING_KEY_PUBLIC.pub' -n file natoboram-gigachad.ts-*.tgz
+          ssh-keygen -Y verify -f ./.github/allowed_signers.txt -I '41898282+github-actions[bot]@users.noreply.github.com' -n file -s natoboram-gigachad.ts-*.tgz.sig < natoboram-gigachad.ts-*.tgz
+      - run: gh release upload ${{ github.ref_name }} natoboram-gigachad.ts-*.tgz natoboram-gigachad.ts-*.tgz.sig
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

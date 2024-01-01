@@ -24,7 +24,7 @@ To make the `git push` work when signed commits are enforced (because you are a 
 
 1. Genereate a SSH key with <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key>
 2. Add the private key to your project's secrets at `/settings/secrets/actions/new` with the name `SIGNING_KEY_PRIVATE`
-3. Add the public key to your project's secrets at `/settings/secrets/actions/new` with the name `SIGNING_KEY_PUBLIC`
+3. Add the public key to your project's variables at `/settings/variables/actions/new` with the name `SIGNING_KEY_PUBLIC`
 
 To publish on NPM, you'll need to provide your NPM token.
 

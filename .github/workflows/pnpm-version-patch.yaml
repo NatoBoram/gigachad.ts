@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ssh-key: "${{ secrets.SIGNING_KEY_PRIVATE }}"
+          ssh-key: ${{ secrets.SIGNING_KEY_PRIVATE }}
       - uses: pnpm/action-setup@v2
         with:
           version: latest
@@ -26,7 +26,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
           git config gpg.format ssh
-          git config user.signingkey 'key::${{ secrets.SIGNING_KEY_PUBLIC }}'
+          git config user.signingkey 'key::${{ vars.SIGNING_KEY_PUBLIC }}'
 
           eval `ssh-agent -s`
           ssh-add - <<< '${{ secrets.SIGNING_KEY_PRIVATE }}'
