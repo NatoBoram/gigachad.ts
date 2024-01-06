@@ -19,6 +19,7 @@ The most gigachad project setup for TypeScript.
 - Package management with [PNPM](https://github.com/pnpm/pnpm)
 - Publish it with a GitHub Workflow
 - Run it with [`tsx`](https://github.com/privatenumber/tsx)
+- Run your GitHub Actions locally with [`act`](https://github.com/nektos/act)
 - Unit tests with [Vitest](https://github.com/vitest-dev/vitest)
 
 ## Publishing
@@ -30,6 +31,7 @@ To make the `git push` work when signed commits are enforced (because you are a 
 1. Genereate a SSH key with <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key>
 2. Add the private key to your project's secrets at `/settings/secrets/actions/new` with the name `SIGNING_KEY_PRIVATE`
 3. Add the public key to your project's variables at `/settings/variables/actions/new` with the name `SIGNING_KEY_PUBLIC`
+4. Add the public key to your project's deploy keys at `/settings/keys`
 
 To publish on NPM, you'll need to provide your NPM token.
 

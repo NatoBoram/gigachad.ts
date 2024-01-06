@@ -13,19 +13,21 @@ jobs:
       contents: read
       packages: write
 
+    if: github.actor != 'nektos/act'
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: latest
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           cache: pnpm
           node-version: 21
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       - run: pnpm build
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           registry-url: https://npm.pkg.github.com
           scope: "@natoboram"
@@ -33,7 +35,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           registry-url: https://registry.npmjs.org
           scope: "@natoboram"
