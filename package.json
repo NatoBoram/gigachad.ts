@@ -40,12 +40,13 @@
 	"scripts": {
 		"build": "tsc",
 		"dev": "tsx ./src/main.ts",
+		"docker": "pnpm run docker:build && npm run docker:run",
 		"docker:build": "docker build -t gigachad.ts .",
 		"docker:run": "docker run gigachad.ts",
-		"docker": "pnpm run docker:build && npm run docker:run",
 		"docs": "typedoc",
 		"format": "prettier --write .",
 		"lint": "eslint . && prettier --check .",
+		"lint:fix": "eslint --fix .; prettier --list-different --write .",
 		"start": "node dist/main.js",
 		"test": "vitest"
 	},
