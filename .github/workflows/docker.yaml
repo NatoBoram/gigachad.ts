@@ -37,7 +37,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            natoboram/leanish
+            natoboram/gigachad.ts
             ghcr.io/${{ github.repository }}
           tags: |
             type=ref,event=tag
@@ -52,5 +52,3 @@ jobs:
           push: ${{ github.ref_type == 'tag' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          secrets: |
-            BUILD_BASE=
