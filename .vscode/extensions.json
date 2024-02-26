@@ -5,6 +5,6 @@
 		"esbenp.prettier-vscode",
 		"github.vscode-github-actions",
 		"github.vscode-pull-request-github",
-		"zixuanchen.vitest-explorer"
+		"vitest.explorer"
 	]
 }
