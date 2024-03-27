@@ -15,7 +15,10 @@ parserOptions:
 plugins:
   - "@typescript-eslint"
 rules:
-  "@typescript-eslint/class-methods-use-this": error
+  "@typescript-eslint/class-methods-use-this":
+    - error
+    - ignoreClassesThatImplementAnInterface: true
+      ignoreOverrideMethods: true
   "@typescript-eslint/consistent-type-exports": error
   "@typescript-eslint/consistent-type-imports":
     - error
@@ -40,3 +43,7 @@ rules:
   "@typescript-eslint/return-await": error
   "@typescript-eslint/sort-type-constituents": error
   "@typescript-eslint/switch-exhaustiveness-check": error
+
+  func-style:
+    - error
+    - declaration
