@@ -29,8 +29,8 @@ This template offers a GitHub Workflow to help you automatically bump the versio
 To make the `git push` work when signed commits are enforced (because you are a gigachad), you'll need to provide a SSH key.
 
 1. Genereate a SSH key with <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key>
-2. Add the private key to your project's secrets at `/settings/secrets/actions/new` with the name `SIGNING_KEY_PRIVATE`
-3. Add the public key to your project's variables at `/settings/variables/actions/new` with the name `SIGNING_KEY_PUBLIC`
+2. Add the private key to your project's secrets at `/settings/secrets/actions/new` with the name `DEPLOY_KEY_PRIVATE`
+3. Add the public key to your project's variables at `/settings/variables/actions/new` with the name `DEPLOY_KEY_PUBLIC`
 4. Add the public key to your project's deploy keys at `/settings/keys`
 
 To publish on NPM, you'll need to provide your NPM token.

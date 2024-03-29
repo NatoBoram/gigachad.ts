@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
-      packages: write
+      contents: write # Upload the release files
+      id-token: write # Add `--provenance`
+      packages: write # Publish the package
 
     if: github.actor != 'nektos/act'
 
@@ -31,7 +32,7 @@ jobs:
         with:
           registry-url: https://npm.pkg.github.com
           scope: "@natoboram"
-      - run: pnpm publish --access public --no-git-checks
+      - run: pnpm publish --access public --no-git-checks --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -39,7 +40,7 @@ jobs:
         with:
           registry-url: https://registry.npmjs.org
           scope: "@natoboram"
-      - run: pnpm publish --access public --no-git-checks
+      - run: pnpm publish --access public --no-git-checks --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
@@ -47,10 +48,10 @@ jobs:
       - name: Sign
         run: |
           eval `ssh-agent -s`
-          ssh-add - <<< '${{ secrets.SIGNING_KEY_PRIVATE }}'
-          echo '${{ vars.SIGNING_KEY_PUBLIC }}' > '${{ runner.temp }}/SIGNING_KEY_PUBLIC.pub'
-          ssh-keygen -Y sign -f '${{ runner.temp }}/SIGNING_KEY_PUBLIC.pub' -n file natoboram-gigachad.ts-*.tgz
-          ssh-keygen -Y verify -f ./.github/allowed_signers.txt -I '41898282+github-actions[bot]@users.noreply.github.com' -n file -s natoboram-gigachad.ts-*.tgz.sig < natoboram-gigachad.ts-*.tgz
+          ssh-add - <<< '${{ secrets.DEPLOY_KEY_PRIVATE }}'
+          echo '${{ vars.DEPLOY_KEY_PUBLIC }}' > '${{ runner.temp }}/DEPLOY_KEY_PUBLIC.pub'
+          ssh-keygen -Y sign -f '${{ runner.temp }}/DEPLOY_KEY_PUBLIC.pub' -n file natoboram-gigachad.ts-*.tgz
+          ssh-keygen -Y verify -f ./.github/authorized_keys -I '41898282+github-actions[bot]@users.noreply.github.com' -n file -s natoboram-gigachad.ts-*.tgz.sig < natoboram-gigachad.ts-*.tgz
       - run: gh release upload ${{ github.ref_name }} natoboram-gigachad.ts-*.tgz natoboram-gigachad.ts-*.tgz.sig
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

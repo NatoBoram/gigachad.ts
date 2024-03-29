@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ssh-key: ${{ secrets.SIGNING_KEY_PRIVATE }}
+          ssh-key: ${{ secrets.DEPLOY_KEY_PRIVATE }}
       - uses: pnpm/action-setup@v3
         with:
           version: latest
@@ -29,15 +29,15 @@ jobs:
 
           git config commit.gpgsign true
           git config gpg.format ssh
-          git config user.signingkey 'key::${{ vars.SIGNING_KEY_PUBLIC }}'
+          git config user.signingkey 'key::${{ vars.DEPLOY_KEY_PUBLIC }}'
 
           eval `ssh-agent -s`
-          ssh-add - <<< '${{ secrets.SIGNING_KEY_PRIVATE }}'
+          ssh-add - <<< '${{ secrets.DEPLOY_KEY_PRIVATE }}'
 
           VERSION=$(pnpm version patch --no-git-tag-version)
 
           git commit --all --message "🔖 $VERSION"
-          git tag $VERSION
+          git tag --annotate --message "🔖 $VERSION" --sign $VERSION
           git push
           git push --tags
 
