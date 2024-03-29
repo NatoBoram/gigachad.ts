@@ -40,9 +40,10 @@
 	"scripts": {
 		"build": "tsc",
 		"dev": "tsx ./src/main.ts",
-		"docker": "pnpm run docker:build && npm run docker:run",
+		"docker": "pnpm run docker:build && pnpm run docker:run",
 		"docker:build": "docker build -t gigachad.ts .",
 		"docker:run": "docker run gigachad.ts",
+		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep gigachad.ts | awk '{print $2}' | xargs docker kill",
 		"docs": "typedoc",
 		"format": "prettier --write .",
 		"lint": "eslint . && prettier --check .",
