@@ -10,6 +10,7 @@
 		"source.organizeImports": "always"
 	},
 	"editor.formatOnSave": true,
+	"eslint.useFlatConfig": true,
 	"explorer.fileNesting.patterns": {
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map",
 		"*.ts": "${capture}.test.ts, ${capture}.test.ts.map",
