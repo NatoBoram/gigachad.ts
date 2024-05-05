@@ -34,7 +34,9 @@
 		"!dist/**/*.test.*"
 	],
 	"main": "dist/index.js",
-	"bin": "dist/main.js",
+	"bin": {
+		"gigachad": "dist/main.js"
+	},
 	"repository": "github:NatoBoram/gigachad.ts",
 	"scripts": {
 		"build": "tsc",
