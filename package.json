@@ -57,7 +57,7 @@
 		"globals": "^15.0.0",
 		"prettier": "^3.2.5",
 		"tsx": "^4.7.1",
-		"typedoc": "^0.25.12",
+		"typedoc": "^0.25.13",
 		"typescript": "~5.4.3",
 		"typescript-eslint": "^7.7.1",
 		"vitest": "^1.4.0"
