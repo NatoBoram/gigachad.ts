@@ -40,11 +40,12 @@
 	"repository": "github:NatoBoram/gigachad.ts",
 	"scripts": {
 		"build": "tsc",
+		"clean": "rm -rf dist docs node_modules tsconfig.tsbuildinfo",
 		"dev": "tsx ./src/main.ts",
 		"docker": "pnpm run docker:build && pnpm run docker:run",
 		"docker:build": "docker build -t gigachad.ts .",
-		"docker:run": "docker run gigachad.ts",
 		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep gigachad.ts | awk '{print $2}' | xargs docker kill",
+		"docker:run": "docker run gigachad.ts",
 		"docs": "typedoc",
 		"format": "prettier --write .",
 		"lint": "eslint . && prettier --check .",
