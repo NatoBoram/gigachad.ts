@@ -17,5 +17,6 @@
 		".env": ".env.*",
 		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
 		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo"
-	}
+	},
+	"typescript.tsdk": "node_modules/typescript/lib"
 }
