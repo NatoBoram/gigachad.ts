@@ -15,10 +15,11 @@ The most gigachad project setup for TypeScript.
 - Documentation with [TypeDoc](https://github.com/TypeStrong/typedoc)
 - Enforce format-on-save in [VSCode](https://github.com/microsoft/vscode)
 - Formatting with [Prettier](https://github.com/prettier/prettier)
-- Linting with [ESLint](https://github.com/eslint/eslint)
-- Package management with [PNPM](https://github.com/pnpm/pnpm)
+- Lint code with [ESLint](https://github.com/eslint/eslint)
+- Lint markdown with [markdownlint](https://github.com/DavidAnson/markdownlint)
+- Package management with [pnpm](https://github.com/pnpm/pnpm)
 - Publish it with a GitHub Workflow
-- Run it with [`tsx`](https://github.com/privatenumber/tsx)
+- Run it with [tsx](https://github.com/privatenumber/tsx)
 - Run your GitHub Actions locally with [`act`](https://github.com/nektos/act)
 - Unit tests with [Vitest](https://github.com/vitest-dev/vitest)
 
