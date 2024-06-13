@@ -3,8 +3,10 @@
 	"version": "0.0.0",
 	"description": "The most gigachad project setup for TypeScript.",
 	"keywords": [
+		"dependabot",
 		"eslint",
 		"gigachad",
+		"markdownlint",
 		"prettier",
 		"project-template",
 		"typescript",
