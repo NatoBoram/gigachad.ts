@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: pnpm
-          node-version: 21
+          node-version: latest
       - name: Configure Git, patch, release and push
         run: |
           git config user.name 'github-actions[bot]'
@@ -29,6 +29,8 @@ jobs:
 
           git config commit.gpgsign true
           git config gpg.format ssh
+          git config push.gpgSign 'if-asked'
+          git config tag.gpgSign true
           git config user.signingkey 'key::${{ vars.DEPLOY_KEY_PUBLIC }}'
 
           eval `ssh-agent -s`
