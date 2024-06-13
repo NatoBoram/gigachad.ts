@@ -48,8 +48,8 @@
 		"docker:run": "docker run gigachad.ts",
 		"docs": "typedoc",
 		"format": "prettier --write .",
-		"lint": "eslint . && prettier --check .",
-		"lint:fix": "eslint --fix .; prettier --list-different --write .",
+		"lint": "eslint . && markdownlint-cli2 \"**/*.md\" && prettier --check .",
+		"lint:fix": "eslint --fix --quiet .; markdownlint-cli2 \"**/*.md\" --fix; prettier --list-different --write .",
 		"start": "node dist/main.js",
 		"test": "vitest"
 	},
@@ -58,6 +58,7 @@
 		"eslint": "^9.4.0",
 		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.4.0",
+		"markdownlint-cli2": "^0.13.0",
 		"prettier": "^3.3.2",
 		"tsx": "^4.15.3",
 		"typedoc": "^0.25.13",
