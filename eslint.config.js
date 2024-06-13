@@ -3,8 +3,7 @@ import prettier from "eslint-config-prettier"
 import globals from "globals"
 import tseslint from "typescript-eslint"
 
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access */
 
 export default tseslint.config(
 	{
@@ -53,12 +52,22 @@ export default tseslint.config(
 				{ checkArrowFunctions: false },
 			],
 			"@typescript-eslint/require-array-sort-compare": "error",
+			"@typescript-eslint/restrict-template-expressions": [
+				"error",
+				{
+					allowBoolean: true,
+					allowNullish: true,
+					allowNumber: true,
+					allowRegExp: true,
+				},
+			],
 			"@typescript-eslint/return-await": "error",
 			"@typescript-eslint/sort-type-constituents": "error",
 			"@typescript-eslint/switch-exhaustiveness-check": "error",
 			"func-style": ["error", "declaration"],
 		},
 	},
+
 	{
 		ignores: [
 			".pnpm-store/",
