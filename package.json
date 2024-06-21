@@ -56,16 +56,16 @@
 		"test": "vitest"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.4.0",
-		"eslint": "^9.4.0",
+		"@eslint/js": "^9.5.0",
+		"eslint": "^9.5.0",
 		"eslint-config-prettier": "^9.1.0",
-		"globals": "^15.4.0",
+		"globals": "^15.6.0",
 		"markdownlint-cli2": "^0.13.0",
 		"prettier": "^3.3.2",
-		"tsx": "^4.15.3",
+		"tsx": "^4.15.6",
 		"typedoc": "^0.25.13",
-		"typescript": "5.5.0-beta",
-		"typescript-eslint": "^7.13.0",
+		"typescript": "5.5.2",
+		"typescript-eslint": "^7.13.1",
 		"vitest": "^1.6.0"
 	},
 	"type": "module",
