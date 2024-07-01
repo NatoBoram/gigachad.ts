@@ -11,6 +11,14 @@ updates:
       patch:
         update-types:
           - patch
+      minor-development:
+        update-types:
+          - minor
+        dependency-type: development
+      minor-production:
+        update-types:
+          - minor
+        dependency-type: production
       eslint:
         patterns:
           - "*eslint*"
