@@ -68,7 +68,7 @@
 		"vitest": "^2.0.5"
 	},
 	"engines": {
-		"node": ">=23.0.0-nightly202407253de7a4c374"
+		"node": ">=22.6"
 	},
 	"type": "module",
 	"exports": {
