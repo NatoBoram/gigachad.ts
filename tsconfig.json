@@ -15,6 +15,7 @@
 		"rootDir": "./src",
 		"moduleResolution": "NodeNext",
 		"typeRoots": ["./node_modules/@types", "./src/types"],
+		"allowImportingTsExtensions": true,
 		"resolvePackageJsonExports": true,
 		"resolvePackageJsonImports": true,
 		"resolveJsonModule": true,
@@ -26,6 +27,7 @@
 		"declarationMap": true,
 		"sourceMap": true,
 		"outDir": "./dist",
+		"noEmit": true,
 		"downlevelIteration": true,
 
 		/* Interop Constraints */
