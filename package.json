@@ -32,12 +32,12 @@
 		}
 	],
 	"files": [
-		"dist",
-		"!dist/**/*.test.*"
+		"src",
+		"!src/**/*.test.*"
 	],
-	"main": "dist/index.js",
+	"main": "src/index.ts",
 	"bin": {
-		"gigachad": "dist/main.js"
+		"gigachad": "src/main.ts"
 	},
 	"repository": "github:NatoBoram/gigachad.ts",
 	"scripts": {
@@ -52,7 +52,7 @@
 		"format": "prettier --write .",
 		"lint": "eslint . && markdownlint-cli2 \"**/*.md\" && prettier --check .",
 		"lint:fix": "eslint --fix --quiet .; markdownlint-cli2 \"**/*.md\" --fix; prettier --list-different --write .",
-		"start": "node dist/main.js",
+		"start": "node --experimental-strip-types src/main.ts",
 		"test": "vitest"
 	},
 	"devDependencies": {
@@ -74,10 +74,10 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"default": "./dist/index.js"
+			"types": "./src/index.ts",
+			"default": "./src/index.ts"
 		}
 	},
-	"types": "dist/index.d.ts",
-	"module": "dist/index.js"
+	"types": "src/index.ts",
+	"module": "src/index.ts"
 }
