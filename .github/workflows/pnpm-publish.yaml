@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: pnpm
-          node-version: nightly
+          node-version: 23-nightly
       - run: pnpm install
       - run: pnpm build
 
