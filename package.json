@@ -43,7 +43,7 @@
 	"scripts": {
 		"build": "tsc",
 		"clean": "rm -rf dist docs node_modules tsconfig.tsbuildinfo",
-		"dev": "tsx ./src/main.ts",
+		"dev": "node --experimental-strip-types ./src/main.ts",
 		"docker": "pnpm run docker:build && pnpm run docker:run",
 		"docker:build": "docker build -t gigachad.ts .",
 		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep gigachad.ts | awk '{print $2}' | xargs docker kill",
@@ -62,7 +62,6 @@
 		"globals": "^15.9.0",
 		"markdownlint-cli2": "^0.13.0",
 		"prettier": "^3.3.3",
-		"tsx": "^4.16.5",
 		"typedoc": "^0.26.5",
 		"typescript": "^5.5.4",
 		"typescript-eslint": "^7.16.1",
