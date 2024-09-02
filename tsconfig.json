@@ -26,7 +26,6 @@
 		"declarationMap": true,
 		"sourceMap": true,
 		"outDir": "./dist",
-		"downlevelIteration": true,
 
 		/* Interop Constraints */
 		"isolatedModules": true,
