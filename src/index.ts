@@ -13,4 +13,4 @@
  * @module
  */
 
-export * from "./main.js"
+export type * from "./main.js"
