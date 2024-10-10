@@ -53,7 +53,8 @@
 		"lint": "eslint . && markdownlint-cli2 \"**/*.md\" && prettier --check .",
 		"lint:fix": "eslint --fix --quiet .; markdownlint-cli2 \"**/*.md\" --fix; prettier --list-different --write .",
 		"start": "node dist/main.js",
-		"test": "vitest"
+		"test": "vitest run",
+		"test:watch": "vitest"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.12.0",
