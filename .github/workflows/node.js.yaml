@@ -20,6 +20,7 @@ jobs:
           node-version: latest
           cache: pnpm
       - run: pnpm install --frozen-lockfile --strict-peer-dependencies
-      - run: pnpm run build --noEmit
+      - run: pnpm run build
+      - run: ls dist
       - run: pnpm run lint
       - run: pnpm run test run
