@@ -4,13 +4,6 @@
 
 The most gigachad project setup for TypeScript.
 
-<img
-  align="right"
-  alt="The most gigachad TypeScript programmer, writing high-quality well-tested code, big muscles, enjoyer, handsome face, digital painting, high resolution, ultra realistic, hands on keyboard"
-  src="https://github.com/NatoBoram/gigachad.ts/assets/10495562/b113f3ee-38cf-4014-9a2e-737a48bad2e0"
-  width="256"
-/>
-
 - Dependency updates with [Dependabot](https://github.com/dependabot/dependabot-core)
 - Documentation with [TypeDoc](https://github.com/TypeStrong/typedoc)
 - Enforce format-on-save in [VSCode](https://github.com/microsoft/vscode)
