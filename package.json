@@ -63,11 +63,11 @@
 		"globals": "^15.11.0",
 		"markdownlint-cli2": "^0.14.0",
 		"prettier": "^3.3.3",
-		"tsx": "^4.19.1",
-		"typedoc": "^0.26.8",
+		"tsx": "^4.19.2",
+		"typedoc": "^0.26.10",
 		"typescript": "5.7.0-beta",
 		"typescript-eslint": "^8.8.1",
-		"vitest": "^2.1.2"
+		"vitest": "^2.1.4"
 	},
 	"type": "module",
 	"exports": {
