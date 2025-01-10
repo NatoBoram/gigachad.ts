@@ -1,11 +1,17 @@
 name: Docker CI
 
 on:
-  push:
-    branches: main
-    tags: v*
   pull_request:
-    branches: main
+    branches:
+      - main
+  merge_group:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    tags:
+      - v*
 
 jobs:
   docker:
