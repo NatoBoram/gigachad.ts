@@ -61,7 +61,7 @@
 		"eslint": "^9.19.0",
 		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.14.0",
-		"markdownlint-cli2": "^0.17.1",
+		"markdownlint-cli2": "^0.17.2",
 		"prettier": "^3.4.2",
 		"tsx": "^4.19.2",
 		"typedoc": "^0.27.6",
