@@ -35,7 +35,7 @@ jobs:
     permissions:
       contents: write
 
-    if: github.event_name == 'pull_request' && failure() && github.actor != 'github-actions[bot]'
+    if: failure() && github.event_name == 'pull_request' && github.actor != 'github-actions[bot]' && github.actor != 'nektos/act'
 
     steps:
       - uses: actions/checkout@v4
