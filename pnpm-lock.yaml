@@ -26,9 +26,6 @@ importers:
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
-      tsx:
-        specifier: ^4.19.2
-        version: 4.19.2
       typedoc:
         specifier: ^0.27.6
         version: 0.27.6(typescript@5.7.3)
@@ -1926,6 +1923,7 @@ snapshots:
       '@esbuild/win32-arm64': 0.23.1
       '@esbuild/win32-ia32': 0.23.1
       '@esbuild/win32-x64': 0.23.1
+    optional: true
 
   esbuild@0.24.2:
     optionalDependencies:
@@ -2077,6 +2075,7 @@ snapshots:
   get-tsconfig@4.8.1:
     dependencies:
       resolve-pkg-maps: 1.0.0
+    optional: true
 
   glob-parent@5.1.2:
     dependencies:
@@ -2472,7 +2471,8 @@ snapshots:
 
   resolve-from@4.0.0: {}
 
-  resolve-pkg-maps@1.0.0: {}
+  resolve-pkg-maps@1.0.0:
+    optional: true
 
   reusify@1.0.4: {}
 
@@ -2553,6 +2553,7 @@ snapshots:
       get-tsconfig: 4.8.1
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   type-check@0.4.0:
     dependencies:
