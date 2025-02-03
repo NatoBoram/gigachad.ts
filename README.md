@@ -14,7 +14,7 @@ The most gigachad project setup for TypeScript.
 - Lint markdown with [markdownlint](https://github.com/DavidAnson/markdownlint)
 - Manage packages with [pnpm](https://github.com/pnpm/pnpm)
 - Pledge your respect with the [Contributor Covenant](https://github.com/EthicalSource/contributor_covenant)
-- Run with [tsx](https://github.com/privatenumber/tsx)
+- Run with ~~[tsx](https://github.com/privatenumber/tsx)~~ [Node.js](https://nodejs.org/api/typescript.html#type-stripping)
 - Test units with [Vitest](https://github.com/vitest-dev/vitest)
 - Update dependencies with [Dependabot](https://github.com/dependabot/dependabot-core)
 
