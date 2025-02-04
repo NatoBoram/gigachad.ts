@@ -1,1 +1,2 @@
+extends: ../.markdownlint.yaml
 first-line-heading: false
