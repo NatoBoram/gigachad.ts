@@ -36,6 +36,9 @@ jobs:
     permissions:
       contents: write
 
+    needs:
+      - test
+
     if: failure() && github.event_name != 'merge_group' && github.actor != 'github-actions[bot]' && github.actor != 'nektos/act'
 
     steps:
