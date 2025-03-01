@@ -57,15 +57,15 @@
 		"test:watch": "vitest"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.19.0",
-		"eslint": "^9.19.0",
+		"@eslint/js": "^9.21.0",
+		"eslint": "^9.21.0",
 		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.14.0",
 		"markdownlint-cli2": "^0.17.2",
-		"prettier": "^3.4.2",
+		"prettier": "^3.5.2",
 		"typedoc": "^0.27.6",
 		"typescript": "5.8.0-beta",
-		"typescript-eslint": "^8.22.0",
+		"typescript-eslint": "^8.25.0",
 		"vitest": "^3.0.5"
 	},
 	"type": "module",
