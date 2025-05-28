@@ -45,6 +45,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
       - run: pnpm pack --pack-gzip-level 9
-      - run: gh release upload ${{ github.ref_name }} natoboram-gigachad.ts-*.tgz
+      - run: gh release create "$VERSION" --generate-notes --title "$VERSION" --verify-tag natoboram-gigachad.ts-*.tgz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ github.ref_name }}
