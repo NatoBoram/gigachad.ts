@@ -20,7 +20,26 @@ The most gigachad project setup for TypeScript.
 
 ## Publishing
 
-This template offers a GitHub Workflow to help you automatically bump the version number, commit it, tag it, push it, then publish it to both NPM, the GitHub Package Registry and in GitHub Releases on the click of a button.
+This template offers a GitHub Workflow to help you automatically publish a version to both NPM, the GitHub Package Registry and in GitHub Releases on the push of a tag.
+
+Start by updating your version number:
+
+```sh
+VERSION=$(pnpm version patch --no-git-tag-version)
+git checkout -b "release/$VERSION"
+git commit --all --message "🔖 $VERSION"
+git push --set-upstream origin "release/$VERSION"
+gh pr create --base main --draft --fill --head "release/$VERSION" --title "🔖 $VERSION"
+```
+
+Once your CI passes, merge the pull request, wait for the CI to pass again then push a new tag:
+
+```sh
+git checkout main
+git pull --autostash --prune --rebase
+git tag "$VERSION" --annotate --message "🔖 $VERSION" --sign
+git push --tags
+```
 
 To publish on NPM, you'll need to provide your NPM token.
 
