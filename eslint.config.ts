@@ -71,6 +71,7 @@ export default tseslint.config(
 	{
 		ignores: [
 			".pnpm-store/",
+			"coverage/",
 			"dist/",
 			"docs/",
 			"node_modules/",
