@@ -7,9 +7,10 @@ The most gigachad project setup for TypeScript.
 - Containerize with [Docker](https://github.com/docker/cli)
 - Deliver continuously with GitHub Workflow
 - Document with [TypeDoc](https://github.com/TypeStrong/typedoc)
-- Enforce format-on-save in [VSCode](https://github.com/microsoft/vscode)
 - Execute workflows locally with [`act`](https://github.com/nektos/act)
+- Format on save in [VSCode](https://github.com/microsoft/vscode)
 - Format with [Prettier](https://github.com/prettier/prettier)
+- Keep a changelog with the [Keep a Changelog](https://keepachangelog.com) format
 - Lint code with [ESLint](https://github.com/eslint/eslint)
 - Lint markdown with [markdownlint](https://github.com/DavidAnson/markdownlint)
 - Manage packages with [pnpm](https://github.com/pnpm/pnpm)
