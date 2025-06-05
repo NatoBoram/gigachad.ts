@@ -21,7 +21,11 @@ jobs:
           node-version: latest
           cache: pnpm
       - run: pnpm install
+
       - run: pnpm run docs
+      - run: pnpm run test:coverage
+      - run: cp --force --recursive coverage docs/coverage
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
