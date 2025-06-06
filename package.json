@@ -41,7 +41,7 @@
 	},
 	"repository": "github:NatoBoram/gigachad.ts",
 	"scripts": {
-		"build": "tsc",
+		"build": "tsgo",
 		"clean": "rm -rf dist docs node_modules tsconfig.tsbuildinfo",
 		"dev": "node ./src/main.ts",
 		"docker": "pnpm run docker:build && pnpm run docker:run",
@@ -59,6 +59,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.28.0",
+		"@typescript/native-preview": "^7.0.0-dev",
 		"@vitest/coverage-v8": "3.2.1",
 		"eslint": "^9.28.0",
 		"eslint-config-prettier": "^10.1.5",

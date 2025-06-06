@@ -13,4 +13,4 @@
  * @module
  */
 
-export type * from "./main.ts"
+export {}
