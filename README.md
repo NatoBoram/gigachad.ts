@@ -32,7 +32,7 @@ VERSION=$(pnpm version patch --no-git-tag-version)
 git checkout -b "release/$VERSION"
 git commit --all --message "🔖 $VERSION"
 git push --set-upstream origin "release/$VERSION"
-gh pr create --base main --draft --fill --head "release/$VERSION" --title "🔖 $VERSION"
+gh pr create --assignee @me --base main --draft --fill-verbose --head "release/$VERSION" --title "🔖 $VERSION"
 ```
 
 Once your CI passes, merge the pull request, wait for the CI to pass again then push a new tag:
