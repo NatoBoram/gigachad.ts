@@ -12,9 +12,9 @@
 	"editor.formatOnSave": true,
 	"eslint.useFlatConfig": true,
 	"explorer.fileNesting.patterns": {
+		".env": ".env.*",
 		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map",
 		"*.ts": "${capture}.test.ts, ${capture}.test.ts.map",
-		".env": ".env.*",
 		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
 		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo"
 	},

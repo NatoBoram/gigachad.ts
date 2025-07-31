@@ -18,6 +18,16 @@ export default tseslint.config(
 
 	{
 		rules: {
+			"@typescript-eslint/consistent-type-assertions": [
+				"error",
+				{ assertionStyle: "never" },
+			],
+		},
+		ignores: ["**/*.test.ts"],
+	},
+
+	{
+		rules: {
 			"@typescript-eslint/class-methods-use-this": [
 				"error",
 				{
