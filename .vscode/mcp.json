@@ -1,0 +1,8 @@
+{
+	"inputs": [],
+	"servers": {
+		"context7": { "type": "http", "url": "https://mcp.context7.com/mcp" },
+		"deepwiki": { "type": "http", "url": "https://mcp.deepwiki.com/mcp" },
+		"github": { "type": "http", "url": "https://api.githubcopilot.com/mcp" }
+	}
+}
