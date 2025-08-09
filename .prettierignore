@@ -5,3 +5,10 @@ docs/
 node_modules/
 package-lock.json
 pnpm-lock.yaml
+
+# Biome.js
+*.css
+*.html
+*.js
+*.json
+*.ts
