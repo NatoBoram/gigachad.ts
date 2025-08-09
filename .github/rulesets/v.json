@@ -20,7 +20,13 @@
 				"required_status_checks": [
 					{ "context": "test", "integration_id": 15368 },
 					{ "context": "docker", "integration_id": 15368 },
-					{ "context": "CodeQL", "integration_id": 57789 }
+					{ "context": "CodeQL", "integration_id": 57789 },
+					{ "context": "Analyze (actions)", "integration_id": 15368 },
+					{
+						"context": "Analyze (javascript-typescript)",
+						"integration_id": 15368
+					},
+					{ "context": "fix", "integration_id": 15368 }
 				]
 			}
 		},
