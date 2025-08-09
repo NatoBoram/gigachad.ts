@@ -31,23 +31,22 @@ jobs:
       - run: pnpm run test
       - run: pnpm run test:coverage
 
-      - uses: actions/upload-artifact@v4
-        if: github.actor != 'dependabot[bot]' && github.actor != 'nektos/act'
+      - if: github.actor != 'dependabot[bot]' && github.actor != 'nektos/act'
+        uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: coverage
           if-no-files-found: error
 
   fix:
-    runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
-    needs:
-      - test
+    needs: test
 
     if: failure() && github.event_name != 'merge_group' && github.actor != 'github-actions[bot]' && github.actor != 'nektos/act'
+
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4

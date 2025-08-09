@@ -7,14 +7,14 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
-
     permissions:
       contents: write # Upload the release files
       id-token: write # Add `--provenance`
       packages: write # Publish the package
 
     if: github.actor != 'nektos/act'
+
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
