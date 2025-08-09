@@ -1,0 +1,44 @@
+{
+	"id": 222405,
+	"name": "main",
+	"target": "branch",
+	"source_type": "Repository",
+	"source": "NatoBoram/gigachad.ts",
+	"enforcement": "active",
+	"conditions": {
+		"ref_name": { "exclude": [], "include": ["~DEFAULT_BRANCH"] }
+	},
+	"rules": [
+		{ "type": "deletion" },
+		{ "type": "non_fast_forward" },
+		{ "type": "creation" },
+		{ "type": "required_linear_history" },
+		{ "type": "required_signatures" },
+		{
+			"type": "pull_request",
+			"parameters": {
+				"required_approving_review_count": 0,
+				"dismiss_stale_reviews_on_push": false,
+				"require_code_owner_review": true,
+				"require_last_push_approval": false,
+				"required_review_thread_resolution": true,
+				"automatic_copilot_code_review_enabled": true,
+				"allowed_merge_methods": ["squash"]
+			}
+		},
+		{
+			"type": "required_status_checks",
+			"parameters": {
+				"strict_required_status_checks_policy": false,
+				"do_not_enforce_on_create": false,
+				"required_status_checks": [
+					{ "context": "test", "integration_id": 15368 },
+					{ "context": "docker", "integration_id": 15368 }
+				]
+			}
+		}
+	],
+	"bypass_actors": [
+		{ "actor_id": 2, "actor_type": "RepositoryRole", "bypass_mode": "always" }
+	]
+ }
