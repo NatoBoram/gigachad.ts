@@ -1,12 +1,12 @@
-import eslint from "@eslint/js"
-import prettier from "eslint-config-prettier"
-import globals from "globals"
-import tseslint from "typescript-eslint"
+import { default as eslint } from "@eslint/js"
+import { default as prettier } from "eslint-config-prettier"
+import { browser, node } from "globals"
+import { default as tseslint } from "typescript-eslint"
 
 export default tseslint.config(
 	{
 		languageOptions: {
-			globals: { ...globals.browser, ...globals.node },
+			globals: { ...browser, ...node },
 			parserOptions: { project: "./tsconfig.eslint.json" },
 		},
 	},
@@ -75,6 +75,8 @@ export default tseslint.config(
 			"func-style": ["error", "declaration"],
 		},
 	},
+
+	{ extends: [tseslint.configs.disableTypeChecked], files: ["**/*.js"] },
 
 	{
 		ignores: [
