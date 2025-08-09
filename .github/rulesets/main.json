@@ -41,4 +41,4 @@
 	"bypass_actors": [
 		{ "actor_id": 2, "actor_type": "RepositoryRole", "bypass_mode": "always" }
 	]
- }
+}
