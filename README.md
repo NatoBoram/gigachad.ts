@@ -35,6 +35,7 @@ Once you've forked this template, here's a few first steps to get you started:
    - Delete the existing one in [`LICENSE.txt`](LICENSE.txt) and place your own
    - Find your license in the [SPDX License List](https://spdx.org/licenses) and put it in [`package.json`](package.json)
 3. In your repository's `/settings/rules`, import the rulesets [`main.json`](.github/rulesets/main.json) and [`v.json`](.github/rulesets/v.json) then delete those files
+   - Adapt the rules to your needs. For example, you may want to disable CodeQL or the `fix` workflow.
 4. Remove the placeholder release in `CHANGELOG.md`
 5. Update [`.github/CODEOWNERS`](.github/CODEOWNERS) to require code reviews from specific users or teams
 6. Update [`.github/FUNDING.yaml`](.github/FUNDING.yaml) with your own sponsorship links
