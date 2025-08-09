@@ -15,25 +15,25 @@ on:
 
 jobs:
   docker:
-    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     if: github.actor != 'nektos/act'
 
-    permissions:
-      packages: write
-      contents: read
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - uses: docker/login-action@v3
-        if: github.actor != 'dependabot[bot]'
+      - if: github.actor != 'dependabot[bot]'
+        uses: docker/login-action@v3
         with:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - uses: docker/login-action@v3
-        if: github.actor != 'dependabot[bot]'
+      - if: github.actor != 'dependabot[bot]'
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
