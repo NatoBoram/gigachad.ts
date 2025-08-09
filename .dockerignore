@@ -1,7 +1,9 @@
 # Folders
+.gemini
 .git
 .github
 .vscode
+coverage
 dist
 docs
 node_modules
@@ -9,8 +11,6 @@ node_modules
 # Files
 .dockerignore
 .editorconfig
-.eslintignore
-.eslintrc.yaml
 .gitignore
 .prettierignore
 .prettierrc.yaml
@@ -19,5 +19,6 @@ node_modules
 *.tsbuildinfo
 *.txt
 Dockerfile
+eslint.config.ts
 tsconfig.eslint.json
 typedoc.json
