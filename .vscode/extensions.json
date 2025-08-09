@@ -1,12 +1,13 @@
 {
 	"recommendations": [
+		"biomejs.biome",
 		"davidanson.vscode-markdownlint",
 		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",
 		"esbenp.prettier-vscode",
 		"github.vscode-github-actions",
 		"github.vscode-pull-request-github",
-		"ms-azuretools.vscode-docker",
+		"ms-azuretools.vscode-containers",
 		"redhat.vscode-yaml",
 		"vitest.explorer"
 	]

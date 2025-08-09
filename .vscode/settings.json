@@ -1,10 +1,13 @@
 {
-	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][markdown][php][postcss][scss][sql][typescript][typescriptreact][xml][yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.minimap.maxColumn": 80
-	},
 	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][php][postcss][scss][svelte][typescript][typescriptreact][xml][yaml]": {
+		"editor.minimap.maxColumn": 80,
 		"editor.rulers": [80]
+	},
+	"[css][html][javascript][javascriptreact][json][jsonc][typescript][typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[dockercompose][github-actions-workflow][markdown][php][postcss][scss][sql][xml][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "always",
