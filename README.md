@@ -5,7 +5,7 @@
 The most gigachad project setup for TypeScript.
 
 - Containerize with [Docker](https://github.com/docker/cli)
-- Deliver continuously with GitHub Workflow
+- Deliver continuously with GitHub Workflows
 - Document with [TypeDoc](https://github.com/TypeStrong/typedoc)
 - Execute workflows locally with [`act`](https://github.com/nektos/act)
 - Format on save in [VSCode](https://github.com/microsoft/vscode)
