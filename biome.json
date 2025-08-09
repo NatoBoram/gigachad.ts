@@ -1,5 +1,6 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.1.4/schema.json",
+	"css": { "formatter": { "enabled": true } },
 	"formatter": {
 		"formatWithErrors": true,
 		"includes": [
@@ -15,17 +16,12 @@
 		"useEditorconfig": true
 	},
 	"html": {
-		"formatter": {
-			"enabled": true,
-			"selfCloseVoidElements": "always"
-		}
+		"formatter": { "enabled": true, "selfCloseVoidElements": "always" }
 	},
 	"javascript": {
-		"formatter": {
-			"arrowParentheses": "asNeeded",
-			"semicolons": "asNeeded"
-		}
+		"formatter": { "arrowParentheses": "asNeeded", "semicolons": "asNeeded" }
 	},
+	"linter": { "enabled": false },
 	"vcs": {
 		"clientKind": "git",
 		"defaultBranch": "main",
