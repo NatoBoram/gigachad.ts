@@ -19,7 +19,8 @@
 				"do_not_enforce_on_create": false,
 				"required_status_checks": [
 					{ "context": "test", "integration_id": 15368 },
-					{ "context": "docker", "integration_id": 15368 }
+					{ "context": "docker", "integration_id": 15368 },
+					{ "context": "CodeQL", "integration_id": 57789 }
 				]
 			}
 		},
