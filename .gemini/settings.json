@@ -1,0 +1,6 @@
+{
+	"mcpServers": {
+		"context7": { "trust": true, "url": "https://mcp.context7.com/sse" },
+		"deepwiki": { "trust": true, "url": "https://mcp.deepwiki.com/sse" }
+	}
+}
