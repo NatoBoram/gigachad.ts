@@ -1,0 +1,35 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.1.4/schema.json",
+	"formatter": {
+		"formatWithErrors": true,
+		"includes": [
+			"**",
+			"!**/.pnpm-store/",
+			"!**/coverage/",
+			"!**/dist/",
+			"!**/docs/",
+			"!**/node_modules/",
+			"!**/package-lock.json",
+			"!**/pnpm-lock.yaml"
+		],
+		"useEditorconfig": true
+	},
+	"html": {
+		"formatter": {
+			"enabled": true,
+			"selfCloseVoidElements": "always"
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "asNeeded",
+			"semicolons": "asNeeded"
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"enabled": true,
+		"useIgnoreFile": true
+	}
+}
