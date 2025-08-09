@@ -1,7 +1,9 @@
 {
-	"[github-actions-workflow][javascript][json][jsonc][markdown][typescript][xml][yaml]": {
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][markdown][php][postcss][scss][sql][typescript][typescriptreact][xml][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.minimap.maxColumn": 80,
+		"editor.minimap.maxColumn": 80
+	},
+	"[css][dockercompose][github-actions-workflow][html][javascript][javascriptreact][json][jsonc][php][postcss][scss][svelte][typescript][typescriptreact][xml][yaml]": {
 		"editor.rulers": [80]
 	},
 	"editor.codeActionsOnSave": {
@@ -13,10 +15,14 @@
 	"eslint.useFlatConfig": true,
 	"explorer.fileNesting.patterns": {
 		".env": ".env.*",
-		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map",
-		"*.ts": "${capture}.test.ts, ${capture}.test.ts.map",
+		".env.*": ".env.${capture}.local",
+		"*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map, ${capture}.test.js",
+		"*.mjs": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs.map",
+		"*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
+		"*.ts": "${capture}.test.ts, ${capture}.test-d.ts, ${capture}.test.ts.map, ${capture}.js",
 		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
-		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo"
+		"tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
+		"tsconfig.tsbuildinfo": "tsconfig.*.tsbuildinfo"
 	},
 	"typescript.tsdk": "node_modules/typescript/lib"
 }
