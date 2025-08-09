@@ -17,6 +17,7 @@ The most gigachad project setup for TypeScript.
 - Manage packages with [pnpm](https://github.com/pnpm/pnpm)
 - Pledge your respect with the [Contributor Covenant](https://github.com/EthicalSource/contributor_covenant)
 - Run with [Node.js](https://nodejs.org/api/typescript.html#type-stripping)
+- Secure your code with [CodeQL](https://github.com/github/codeql)
 - Test units and calculate coverage with [Vitest](https://github.com/vitest-dev/vitest)
 - Update dependencies with [Dependabot](https://github.com/dependabot/dependabot-core)
 
