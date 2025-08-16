@@ -11,3 +11,7 @@
 ### 📓 References
 
 <!-- A list of links to discussions, documentation, issues, pull requests -->
+
+### 📸 Screenshots
+
+<!-- Show us your work :D -->
