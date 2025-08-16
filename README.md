@@ -16,6 +16,7 @@ The most gigachad project setup for TypeScript.
 - Lint markdown with [markdownlint](https://github.com/DavidAnson/markdownlint)
 - Manage packages with [pnpm](https://github.com/pnpm/pnpm)
 - Pledge your respect with the [Contributor Covenant](https://github.com/EthicalSource/contributor_covenant)
+- Review your code with [CodeRabbit](https://github.com/marketplace/coderabbitai)
 - Run with [Node.js](https://nodejs.org/api/typescript.html#type-stripping)
 - Secure your code with [CodeQL](https://github.com/github/codeql)
 - Test units and calculate coverage with [Vitest](https://github.com/vitest-dev/vitest)
@@ -49,7 +50,7 @@ Here's a few useful commands to delete what you don't need.
 
 ```sh
 # AI
-rm -rf .gemini .github/copilot-instructions.md .github/instructions .vscode/mcp.json
+rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instructions .vscode/mcp.json
 ```
 
 ```sh
@@ -87,6 +88,14 @@ pnpm pkg delete exports main module scripts.docs types
 ```sh
 # Rulesets
 rm -rf .github/rulesets
+```
+
+```sh
+# Run
+pnpm pkg delete bin exports files main module scripts.build scripts.dev scripts.docker scripts.docker:build scripts.docker:kill scripts.docker:run scripts.docs scripts.start types
+pnpm pkg set private=true
+pnpm uninstall @typescript/native-preview typedoc
+rm -rf .dockerignore .github/workflows/docker.yaml .github/workflows/github-pages.yaml Dockerfile src/index.ts src/main.ts typedoc.json
 ```
 
 ## Publishing
