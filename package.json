@@ -58,18 +58,18 @@
 		"test:watch": "vitest"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.33.0",
-		"@typescript/native-preview": "7.0.0-dev.20250808.1",
+		"@eslint/js": "^9.34.0",
+		"@typescript/native-preview": "7.0.0-dev.20250822.1",
 		"@vitest/coverage-v8": "3.2.4",
-		"eslint": "^9.33.0",
+		"eslint": "^9.34.0",
 		"eslint-config-prettier": "^10.1.8",
 		"globals": "^16.3.0",
 		"jiti": "^2.5.1",
 		"markdownlint-cli2": "^0.18.1",
 		"prettier": "^3.6.2",
-		"typedoc": "^0.28.9",
+		"typedoc": "^0.28.10",
 		"typescript": "5.9.2",
-		"typescript-eslint": "^8.39.0",
+		"typescript-eslint": "^8.40.0",
 		"vitest": "^3.2.4"
 	},
 	"type": "module",

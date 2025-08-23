@@ -1,6 +1,6 @@
 # `@natoboram/gigachad.ts`
 
-[![Node.js CI](https://github.com/NatoBoram/gigachad.ts/actions/workflows/node.js.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/node.js.yaml) [![Docker CI](https://github.com/NatoBoram/gigachad.ts/actions/workflows/docker.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/docker.yaml) [![CodeQL](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-code-scanning/codeql) [![Coverage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fnatoboram.github.io%2Fgigachad.ts%2Fcoverage%2Fcoverage-summary.json&query=total.branches.pct&suffix=%25&logo=vitest&label=coverage&color=acd268)](https://natoboram.github.io/gigachad.ts/coverage) [![GitHub Pages](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-pages.yaml) [![Dependabot Updates](https://github.com/NatoBoram/gigachad.ts/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/dependabot/dependabot-updates)
+[![Node.js CI](https://github.com/NatoBoram/gigachad.ts/actions/workflows/node.js.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/node.js.yaml) [![Docker CI](https://github.com/NatoBoram/gigachad.ts/actions/workflows/docker.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/docker.yaml) [![CodeQL](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-code-scanning/codeql) [![Coverage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fnatoboram.github.io%2Fgigachad.ts%2Fcoverage%2Fcoverage-summary.json&query=total.branches.pct&suffix=%25&logo=Vitest&label=Coverage&color=acd268)](https://natoboram.github.io/gigachad.ts/coverage) [![GitHub Pages](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/github-pages.yaml) [![Dependabot Updates](https://github.com/NatoBoram/gigachad.ts/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/NatoBoram/gigachad.ts/actions/workflows/dependabot/dependabot-updates) [![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/NatoBoram/gigachad.ts?logo=CodeRabbit&logoColor=FF570A&label=CodeRabbit%20Reviews&labelColor=171717&color=FF570A)](https://github.com/NatoBoram/gigachad.ts/pulls?q=reviewed-by%3Acoderabbitai%5Bbot%5D)
 
 The most gigachad project setup for TypeScript.
 
@@ -50,7 +50,7 @@ Here's a few useful commands to delete what you don't need.
 
 ```sh
 # AI
-rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instructions .vscode/mcp.json
+rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instructions .github/workflows/copilot-setup-steps.yaml .vscode/mcp.json
 ```
 
 ```sh
