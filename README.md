@@ -50,7 +50,7 @@ Here's a few useful commands to delete what you don't need.
 
 ```sh
 # AI
-rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instructions .vscode/mcp.json
+rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instructions .github/workflows/copilot-setup-steps.yaml .vscode/mcp.json
 ```
 
 ```sh
