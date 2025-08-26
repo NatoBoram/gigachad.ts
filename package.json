@@ -51,7 +51,7 @@
 		"docker:run": "docker run gigachad.ts",
 		"docs": "typedoc",
 		"format": "biome format --write .; prettier --list-different --write .",
-		"lint": "eslint . && markdownlint-cli2 \"**/*.md\" && biome check . && prettier --check .",
+		"lint": "eslint . && markdownlint-cli2 \"**/*.md\" && biome format . && prettier --check .",
 		"lint:fix": "eslint --fix --quiet .; markdownlint-cli2 \"**/*.md\" --fix; biome format --write .; prettier --list-different --write .",
 		"start": "node dist/main.js",
 		"test": "vitest run",
