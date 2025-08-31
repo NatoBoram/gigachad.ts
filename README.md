@@ -131,3 +131,13 @@ To publish on NPM, you'll need to provide your NPM token.
 4. Save your new token in the `npm-public-registry` environment in a new secret called `NODE_AUTH_TOKEN`
 
 You can also create the environments `github-packages-registry` and `github-releases` and the publishing workflow will automatically use them.
+
+## Dependabot labels
+
+You can import some relevant labels from Dependabot with these commands:
+
+```sh
+gh label create dependencies --color '#0366d6' --description 'Pull requests that update a dependency file' --force
+gh label create github_actions --color '#000000' --description 'Pull requests that update GitHub Actions code' --force
+gh label create javascript --color '#168700' --description 'Pull requests that update Javascript code' --force
+```
