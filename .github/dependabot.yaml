@@ -46,11 +46,3 @@ updates:
       timezone: America/Toronto
     commit-message:
       prefix: "⬆️ "
-
-  - package-ecosystem: docker-compose
-    directory: /
-    schedule:
-      interval: monthly
-      timezone: America/Toronto
-    commit-message:
-      prefix: "⬆️ "
