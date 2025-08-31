@@ -76,6 +76,18 @@ jobs:
           skip-empty: true
 
       - run: |
+          pnpm dlx ts-autofix --project tsconfig.json
+          git add .
+      - id: commit-ts-autofix
+        uses: qoomon/actions--create-commit@v1
+        with:
+          message: |
+            💚 ts-autofix --project tsconfig.json
+
+            [dependabot skip]
+          skip-empty: true
+
+      - run: |
           pnpm run format
           git add .
       - id: commit-format
@@ -99,5 +111,5 @@ jobs:
             [dependabot skip]
           skip-empty: true
 
-      - if: steps.commit-lockfile.outputs.commit || steps.commit-format.outputs.commit || steps.commit-lint.outputs.commit
+      - if: steps.commit-lockfile.outputs.commit || steps.commit-ts-autofix.outputs.commit || steps.commit-format.outputs.commit || steps.commit-lint.outputs.commit
         run: git push
