@@ -29,7 +29,7 @@ jobs:
       - run: pnpm run test:coverage
       - run: cp --force --recursive coverage docs/coverage
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: docs
 
