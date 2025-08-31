@@ -127,4 +127,7 @@ To publish on NPM, you'll need to provide your NPM token.
 
 1. Sign in to <https://www.npmjs.com>
 2. Access Tokens / Generate New Token / Classic Token / Automation / Generate Token
-3. Copy that token and save it in your project's secrets at `/settings/secrets/actions/new` with the name `NODE_AUTH_TOKEN`
+3. Create an environment in your repository at `/settings/environments` with the name `npm-public-registry`
+4. Save your new token in the `npm-public-registry` environment in a new secret called `NODE_AUTH_TOKEN`
+
+You can also create the environments `github-packages-registry` and `github-releases` and the publishing workflow will automatically use them.
