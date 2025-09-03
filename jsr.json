@@ -1,0 +1,21 @@
+{
+	"$schema": "https://jsr.io/schema/config-file.v1.json",
+	"name": "@natoboram/gigachad-ts",
+	"version": "0.0.0",
+	"license": "Unlicense",
+	"exports": "./src/index.ts",
+	"publish": {
+		"include": [
+			".npmrc",
+			"jsr.json",
+			"LICENSE.txt",
+			"package.json",
+			"pnpm-lock.yaml",
+			"pnpm-workspace.yaml",
+			"README.md",
+			"src",
+			"tsconfig.json"
+		],
+		"exclude": ["src/**/*.test.ts"]
+	}
+}
