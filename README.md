@@ -16,6 +16,10 @@ The most gigachad project setup for TypeScript.
 - Lint markdown with [markdownlint](https://github.com/DavidAnson/markdownlint)
 - Manage packages with [pnpm](https://github.com/pnpm/pnpm)
 - Pledge your respect with the [Contributor Covenant](https://github.com/EthicalSource/contributor_covenant)
+- Publish to [GitHub Packages](https://docs.github.com/packages)
+- Publish to [GitHub Releases](https://docs.github.com/repositories/releasing-projects-on-github)
+- Publish to the [JavaScript Registry](https://jsr.io)
+- Publish to the [npm public registry](https://npmjs.com)
 - Review your code with [CodeRabbit](https://github.com/marketplace/coderabbitai)
 - Run with [Node.js](https://nodejs.org/api/typescript.html#type-stripping)
 - Secure your code with [CodeQL](https://github.com/github/codeql)
@@ -32,10 +36,11 @@ Once you've forked this template, here's a few first steps to get you started:
    - `Nato Boram`: Your author name for [`package.json`](package.json)
    - `NatoBoram`: Your GitHub username
    - `gigachad.ts`: The name of your new repository
+   - `gigachad-ts`: The name of your package on JSR
    - `gigachad`: The name of the command-line interface exposed by this package
 2. [Choose an open source license](https://choosealicense.com)
    - Delete the existing one in [`LICENSE.txt`](LICENSE.txt) and place your own
-   - Find your license in the [SPDX License List](https://spdx.org/licenses) and put it in [`package.json`](package.json)
+   - Find your license in the [SPDX License List](https://spdx.org/licenses) and put it in [`package.json`](package.json) and [`jsr.json`](jsr.json)
 3. In your repository's `/settings/rules`, import the rulesets [`main.json`](.github/rulesets/main.json) and [`v.json`](.github/rulesets/v.json) then delete those files
    - Adapt the rules to your needs. For example, you may want to disable CodeQL or the `fix` workflow.
 4. Remove the placeholder release in `CHANGELOG.md`
@@ -100,17 +105,22 @@ rm -rf .dockerignore .github/workflows/docker.yaml .github/workflows/github-page
 
 ## Publishing
 
-This template offers a GitHub Workflow to help you automatically publish a version to both the NPM public registry, the GitHub Package Registry and in GitHub Releases on the push of a tag.
+This template offers a GitHub Workflow to help you automatically publish a version to NPM, to GitHub Packages, to GitHub Releases and to JSR on the push of a tag.
 
 Start by updating your version number:
 
 ```sh
 git checkout main
 git pull --autostash --prune --rebase
+
 VERSION=$(pnpm version patch --no-git-tag-version)
+echo $(jq --arg v "${VERSION#v}" '.version = $v' jsr.json) > jsr.json
+pnpm run format
+
 git checkout -b "release/$VERSION"
 git commit --all --message "🔖 $VERSION"
 git push --set-upstream origin "release/$VERSION"
+
 gh pr create --assignee @me --base main --draft --fill-verbose --head "release/$VERSION" --title "🔖 $VERSION"
 ```
 
@@ -130,7 +140,15 @@ To publish on NPM, you'll need to provide your NPM token.
 3. Create an environment in your repository at `/settings/environments` with the name `npm-public-registry`
 4. Save your new token in the `npm-public-registry` environment in a new secret called `NODE_AUTH_TOKEN`
 
-You can also create the environments `github-packages-registry` and `github-releases` and the publishing workflow will automatically use them.
+To publish on JSR, you'll need to create a scope and register your package first.
+
+1. Sign in to <https://jsr.io>
+2. <kbd>Publish a package</kbd>
+3. Select or create a scope and register your package name
+4. Link your package to GitHub
+5. Create an environment in your repository at `/settings/environments` with the name `javascript-registry`
+
+You can also create the environments `github-packages-registry` and `github-releases` for the publishing workflow to use automatically.
 
 ## Dependabot labels
 
