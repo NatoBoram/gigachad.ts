@@ -42,6 +42,7 @@
 	"repository": "github:NatoBoram/gigachad.ts",
 	"scripts": {
 		"build": "tsgo",
+		"build:watch": "tsgo --watch",
 		"clean": "rm -rf coverage dist docs node_modules tsconfig.tsbuildinfo",
 		"dev": "node ./src/main.ts",
 		"docker": "pnpm run docker:build && pnpm run docker:run",
@@ -49,15 +50,16 @@
 		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep gigachad.ts | awk '{print $2}' | xargs docker kill",
 		"docker:run": "docker run gigachad.ts",
 		"docs": "typedoc",
-		"format": "prettier --write .",
-		"lint": "eslint . && markdownlint-cli2 \"**/*.md\" && prettier --check .",
-		"lint:fix": "eslint --fix --quiet .; markdownlint-cli2 \"**/*.md\" --fix; prettier --list-different --write .",
+		"format": "biome format --write .; prettier --list-different --write .",
+		"lint": "eslint . && markdownlint-cli2 \"**/*.md\" && biome format . && prettier --check .",
+		"lint:fix": "eslint --fix --quiet .; markdownlint-cli2 \"**/*.md\" --fix; biome format --write .; prettier --list-different --write .",
 		"start": "node dist/main.js",
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "^2.2.0",
 		"@eslint/js": "^9.34.0",
 		"@typescript/native-preview": "7.0.0-dev.20250831.1",
 		"@vitest/coverage-v8": "3.2.4",
