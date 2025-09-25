@@ -35,6 +35,12 @@
 		"dist",
 		"!dist/**/*.test.*"
 	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
 	"main": "dist/index.js",
 	"bin": {
 		"gigachad": "dist/main.js"
@@ -73,12 +79,6 @@
 		"vitest": "^3.2.4"
 	},
 	"type": "module",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"default": "./dist/index.js"
-		}
-	},
 	"types": "dist/index.d.ts",
 	"module": "dist/index.js"
 }

@@ -6,6 +6,8 @@
 	"exports": "./src/index.ts",
 	"publish": {
 		"include": [
+			"src",
+
 			".npmrc",
 			"jsr.json",
 			"LICENSE.txt",
@@ -13,7 +15,6 @@
 			"pnpm-lock.yaml",
 			"pnpm-workspace.yaml",
 			"README.md",
-			"src",
 			"tsconfig.json"
 		],
 		"exclude": ["src/**/*.test.ts"]

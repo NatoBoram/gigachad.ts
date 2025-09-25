@@ -12,6 +12,8 @@ node_modules
 .dockerignore
 .editorconfig
 .gitignore
+.markdownlint-cli2.yaml
+.markdownlint.yaml
 .prettierignore
 .prettierrc.yaml
 *.md
@@ -20,5 +22,7 @@ node_modules
 *.txt
 Dockerfile
 eslint.config.ts
+jsr.json
 tsconfig.eslint.json
 typedoc.json
+vitest.config.ts

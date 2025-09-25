@@ -85,6 +85,7 @@ export default tseslint.config(
 			"dist/",
 			"docs/",
 			"node_modules/",
+
 			"package-lock.json",
 			"pnpm-lock.yaml",
 		],

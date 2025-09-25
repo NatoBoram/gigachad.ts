@@ -1,15 +1,11 @@
 .pnpm-store/
-bun.lockb
-dist/
 docs/
+
+bun.lockb
 package-lock.json
 
-!.env
-.env.*.local
-.env.local
-
-# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,node
+# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,windows
 
 ### Linux ###
 *~
@@ -134,8 +130,10 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-!.env
-.env.*.local
+.env
+.env.development.local
+.env.test.local
+.env.production.local
 .env.local
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -222,4 +220,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows,node
+# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows
+
+!.env
+!.env.*
+.env.*.local
+.env.local
