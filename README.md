@@ -22,6 +22,7 @@ The most gigachad project setup for TypeScript.
 - Publish to the [npm public registry](https://npmjs.com)
 - Review your code with [CodeRabbit](https://github.com/marketplace/coderabbitai)
 - Run with [Node.js](https://nodejs.org/api/typescript.html#type-stripping)
+- Search public code on [grep.app](https://grep.app)
 - Secure your code with [CodeQL](https://github.com/github/codeql)
 - Test units and calculate coverage with [Vitest](https://github.com/vitest-dev/vitest)
 - Update dependencies with [Dependabot](https://github.com/dependabot/dependabot-core)
