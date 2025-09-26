@@ -20,9 +20,12 @@ node_modules
 *.test.ts
 *.tsbuildinfo
 *.txt
+bun.lockb
 Dockerfile
 eslint.config.ts
 jsr.json
+package-lock.json
 tsconfig.eslint.json
 typedoc.json
 vitest.config.ts
+yarn.lock
