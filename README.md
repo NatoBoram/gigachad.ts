@@ -4,6 +4,7 @@
 
 The most gigachad project setup for TypeScript.
 
+- Build with [tsgo](https://github.com/microsoft/typescript-go)
 - Containerize with [Docker](https://github.com/docker/cli)
 - Deliver continuously with GitHub Workflows
 - Document with [TypeDoc](https://github.com/TypeStrong/typedoc)
