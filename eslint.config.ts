@@ -49,6 +49,10 @@ export default defineConfig(
 			"@typescript-eslint/method-signature-style": "error",
 			"@typescript-eslint/no-import-type-side-effects": "error",
 			"@typescript-eslint/no-unnecessary-qualifier": "error",
+			"@typescript-eslint/no-unused-vars": [
+				"warn",
+				{ argsIgnorePattern: "^_" },
+			],
 			"@typescript-eslint/no-useless-empty-export": "error",
 			"@typescript-eslint/prefer-nullish-coalescing": [
 				"error",
