@@ -56,6 +56,7 @@ jobs:
       - uses: actions/download-artifact@v5
         with:
           name: docs
+          path: docs
 
       - id: deploy
         uses: ipfs/ipfs-deploy-action@v1
