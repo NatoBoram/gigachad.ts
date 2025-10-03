@@ -57,7 +57,7 @@ Here's a few useful commands to delete what you don't need.
 
 ```sh
 # AI
-rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instructions .github/workflows/copilot-setup-steps.yaml .vscode/mcp.json
+rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instructions .github/workflows/copilot-setup-steps.yaml .vscode/mcp.json GEMINI.md
 ```
 
 ```sh
@@ -83,6 +83,11 @@ rm -f .github/workflows/github-pages.yaml typedoc.json
 # Funding
 pnpm pkg delete funding
 rm -f .github/FUNDING.yaml
+```
+
+```sh
+# IPFS
+rm -rf .github/workflows/ipfs.yaml
 ```
 
 ```sh
