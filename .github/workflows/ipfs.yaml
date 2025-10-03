@@ -67,7 +67,8 @@ jobs:
           kubo-api-url: ${{ secrets.KUBO_API_URL }}
           path-to-deploy: docs
 
-      - run: ipfs --api "$KUBO_API_URL" --api-auth "$KUBO_API_AUTH" name publish --key=@natoboram/gigachad.ts "/ipfs/$CID"
+      - if: github.ref_name == 'main'
+        run: ipfs --api "$KUBO_API_URL" --api-auth "$KUBO_API_AUTH" name publish --key=@natoboram/gigachad.ts "/ipfs/$CID"
         env:
           CID: ${{ steps.deploy.outputs.cid }}
           KUBO_API_AUTH: ${{ secrets.KUBO_API_AUTH }}
