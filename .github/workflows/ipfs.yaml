@@ -62,7 +62,7 @@ jobs:
         uses: ipfs/ipfs-deploy-action@v1
         with:
           github-token: ${{ github.token }}
-          ipfs-add-options: --chunker=buzhash --cid-version=1 --hash=blake3 --pin=false --recursive
+          ipfs-add-options: --chunker=buzhash --cid-version=1 --hash=blake3 --pin=false
           kubo-api-auth: ${{ secrets.KUBO_API_AUTH }}
           kubo-api-url: ${{ secrets.KUBO_API_URL }}
           path-to-deploy: docs
