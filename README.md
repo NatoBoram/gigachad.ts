@@ -11,6 +11,7 @@ The most gigachad project setup for TypeScript.
 - Execute workflows locally with [`act`](https://github.com/nektos/act)
 - Format on save in [VSCode](https://github.com/microsoft/vscode)
 - Format with [Prettier](https://github.com/prettier/prettier)
+- Host on [IPFS](https://github.com/ipfs/kubo)
 - Interact with GitHub using [`gh`](https://github.com/cli/cli)
 - Keep a changelog with the [Keep a Changelog](https://keepachangelog.com) format
 - Lint code with [ESLint](https://github.com/eslint/eslint)
