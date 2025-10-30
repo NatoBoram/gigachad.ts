@@ -50,7 +50,7 @@ jobs:
 
     environment:
       name: ipfs
-      url: https://${{ steps.deploy.outputs.cid }}.ipfs.dweb.link
+      url: ${{ steps.url.outputs.url }}
 
     steps:
       - uses: actions/download-artifact@v5
@@ -73,3 +73,9 @@ jobs:
           CID: ${{ steps.deploy.outputs.cid }}
           KUBO_API_AUTH: ${{ secrets.KUBO_API_AUTH }}
           KUBO_API_URL: ${{ secrets.KUBO_API_URL }}
+
+      - id: url
+        if: steps.deploy.outputs.cid
+        run: echo "url=https://$CID.ipfs.dweb.link" >> "$GITHUB_OUTPUT"
+        env:
+          CID: ${{ steps.deploy.outputs.cid }}
