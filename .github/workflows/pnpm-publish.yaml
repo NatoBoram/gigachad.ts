@@ -25,7 +25,7 @@ jobs:
       - run: pnpm build
       - run: pnpm pack --pack-gzip-level 9
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: github.actor != 'nektos/act'
         with:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz

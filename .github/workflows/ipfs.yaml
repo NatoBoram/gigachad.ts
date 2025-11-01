@@ -32,7 +32,7 @@ jobs:
       - run: pnpm run test:coverage
       - run: cp --force --recursive coverage docs/coverage
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: docs
           path: docs
