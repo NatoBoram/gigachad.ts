@@ -73,7 +73,7 @@
 		"jiti": "^2.6.1",
 		"markdownlint-cli2": "^0.18.1",
 		"prettier": "^3.6.2",
-		"typedoc": "^0.28.13",
+		"typedoc": "^0.28.14",
 		"typescript": "5.9.3",
 		"typescript-eslint": "^8.45.0",
 		"vitest": "^3.2.4"
