@@ -17,7 +17,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           cache: pnpm
           node-version: latest
@@ -49,7 +49,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           registry-url: https://registry.npmjs.org
           scope: "@natoboram"
@@ -84,7 +84,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           registry-url: https://npm.pkg.github.com
           scope: "@natoboram"
@@ -123,7 +123,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           registry-url: https://npm.jsr.io
           scope: "@natoboram"
