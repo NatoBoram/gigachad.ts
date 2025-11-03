@@ -128,7 +128,7 @@ jobs:
           registry-url: https://npm.jsr.io
           scope: "@natoboram"
 
-      - run: pnpm dlx jsr publish --provenance
+      - run: pnpm dlx jsr publish
 
       - id: url
         run: echo "url=https://jsr.io/@natoboram/gigachad-ts@${VERSION#v}" >> "$GITHUB_OUTPUT"
