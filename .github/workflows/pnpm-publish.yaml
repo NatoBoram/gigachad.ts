@@ -17,7 +17,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           cache: pnpm
           node-version: latest
@@ -49,12 +49,12 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           registry-url: https://registry.npmjs.org
           scope: "@natoboram"
 
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
 
@@ -84,12 +84,12 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           registry-url: https://npm.pkg.github.com
           scope: "@natoboram"
 
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
 
@@ -123,7 +123,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: latest
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           registry-url: https://npm.jsr.io
           scope: "@natoboram"
@@ -148,7 +148,7 @@ jobs:
       url: ${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}
 
     steps:
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
 
