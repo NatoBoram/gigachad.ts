@@ -54,7 +54,7 @@ jobs:
           registry-url: https://registry.npmjs.org
           scope: "@natoboram"
 
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
 
@@ -89,7 +89,7 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: "@natoboram"
 
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
 
@@ -148,7 +148,7 @@ jobs:
       url: ${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}
 
     steps:
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
 
