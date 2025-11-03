@@ -35,11 +35,12 @@ jobs:
       - run: pnpm run test
       - run: pnpm run test:coverage
 
-      - if: github.actor != 'dependabot[bot]' && github.actor != 'nektos/act'
+      - if: github.actor != 'nektos/act'
         uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: coverage
+          compression-level: 9
           if-no-files-found: error
 
   fix:
@@ -47,9 +48,7 @@ jobs:
       contents: write
 
     needs: test
-
     if: failure() && github.event_name != 'merge_group' && github.actor != 'github-actions[bot]' && github.actor != 'nektos/act'
-
     runs-on: ubuntu-latest
 
     steps:
