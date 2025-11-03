@@ -1,7 +1,8 @@
-FROM node:24-slim AS base
+FROM node:25-slim AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
+RUN apt update && apt install --yes wget && rm -rf /var/lib/apt/lists/*
+RUN wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
 COPY . /app
 WORKDIR /app
 
