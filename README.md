@@ -158,6 +158,22 @@ To publish on JSR, you'll need to create a scope and register your package first
 
 You can also create the environments `github-packages-registry` and `github-releases` for the publishing workflow to use automatically.
 
+## Default labels
+
+When creating a new GitHub repository, those are the available labels, in case you're missing some of them:
+
+```sh
+gh label create 'bug'              --color '#d73a4a' --description "Something isn't working"                    --force
+gh label create 'documentation'    --color '#0075ca' --description 'Improvements or additions to documentation' --force
+gh label create 'duplicate'        --color '#cfd3d7' --description 'This issue or pull request already exists'  --force
+gh label create 'enhancement'      --color '#a2eeef' --description 'New feature or request'                     --force
+gh label create 'good first issue' --color '#7057ff' --description 'Good for newcomers'                         --force
+gh label create 'help wanted'      --color '#008672' --description 'Extra attention is needed'                  --force
+gh label create 'invalid'          --color '#e4e669' --description "This doesn't seem right"                    --force
+gh label create 'question'         --color '#d876e3' --description 'Further information is requested'           --force
+gh label create 'wontfix'          --color '#ffffff' --description 'This will not be worked on'                 --force
+```
+
 ## Dependabot labels
 
 You can import some relevant labels from Dependabot with these commands:
