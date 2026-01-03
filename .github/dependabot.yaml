@@ -22,6 +22,8 @@ updates:
       eslint:
         patterns:
           - "*eslint*"
+          - globals
+          - jiti
       prettier:
         patterns:
           - "*prettier*"
