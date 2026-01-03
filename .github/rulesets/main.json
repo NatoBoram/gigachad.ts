@@ -19,10 +19,10 @@
 			"parameters": {
 				"required_approving_review_count": 0,
 				"dismiss_stale_reviews_on_push": false,
+				"required_reviewers": [],
 				"require_code_owner_review": true,
 				"require_last_push_approval": false,
 				"required_review_thread_resolution": true,
-				"automatic_copilot_code_review_enabled": false,
 				"allowed_merge_methods": ["squash"]
 			}
 		},
@@ -34,14 +34,11 @@
 				"required_status_checks": [
 					{ "context": "test", "integration_id": 15368 },
 					{ "context": "docker", "integration_id": 15368 },
-					{ "context": "CodeQL", "integration_id": 57789 },
-					{ "context": "Analyze (actions)", "integration_id": 15368 },
-					{
-						"context": "Analyze (javascript-typescript)",
-						"integration_id": 15368
-					},
 					{ "context": "fix", "integration_id": 15368 },
-					{ "context": "CodeRabbit", "integration_id": 347564 }
+					{ "context": "CodeRabbit", "integration_id": 347564 },
+					{ "context": "build_ipfs", "integration_id": 15368 },
+					{ "context": "deploy_ipfs", "integration_id": 15368 },
+					{ "context": "CodeQL", "integration_id": 57789 }
 				]
 			}
 		},
@@ -55,6 +52,13 @@
 						"alerts_threshold": "errors"
 					}
 				]
+			}
+		},
+		{ "type": "code_quality", "parameters": { "severity": "all" } },
+		{
+			"type": "copilot_code_review_analysis_tools",
+			"parameters": {
+				"tools": [{ "name": "CodeQL" }, { "name": "ESLint" }, { "name": "PMD" }]
 			}
 		}
 	],
