@@ -15,7 +15,7 @@
 		"rootDir": "./src",
 		"moduleResolution": "NodeNext",
 		"typeRoots": ["./node_modules/@types", "./src/types"],
-		"types": [],
+		"types": ["node"],
 		"rewriteRelativeImportExtensions": true,
 		"resolvePackageJsonExports": true,
 		"resolvePackageJsonImports": true,
