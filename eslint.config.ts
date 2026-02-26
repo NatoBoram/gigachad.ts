@@ -8,7 +8,10 @@ export default defineConfig(
 	{
 		languageOptions: {
 			globals: { ...browser, ...node },
-			parserOptions: { project: "./tsconfig.eslint.json" },
+			parserOptions: {
+				project: "./tsconfig.eslint.json",
+				warnOnUnsupportedTypeScriptVersion: false,
+			},
 		},
 	},
 
