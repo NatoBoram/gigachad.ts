@@ -66,7 +66,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"@typescript/native-preview": "7.0.0-dev.20260223.1",
+		"@typescript/native-preview": "7.0.0-dev.20260225.1",
 		"@vitest/coverage-v8": "4.0.18",
 		"eslint": "^10.0.2",
 		"eslint-config-prettier": "^10.1.8",
