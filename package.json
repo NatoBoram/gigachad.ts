@@ -76,7 +76,7 @@
 		"markdownlint-cli2": "^0.21.0",
 		"prettier": "^3.8.1",
 		"typedoc": "^0.28.17",
-		"typescript": "6.0.0-beta",
+		"typescript": "6.0.0-dev.20260301",
 		"typescript-eslint": "^8.56.1",
 		"vitest": "^4.0.18"
 	},
