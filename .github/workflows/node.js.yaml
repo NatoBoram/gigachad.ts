@@ -36,7 +36,7 @@ jobs:
       - run: pnpm run test:coverage
 
       - if: github.actor != 'nektos/act'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: coverage
           path: coverage
