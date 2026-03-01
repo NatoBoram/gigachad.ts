@@ -71,7 +71,7 @@
 		"@vitest/coverage-v8": "4.0.18",
 		"eslint": "^10.0.2",
 		"eslint-config-prettier": "^10.1.8",
-		"globals": "^17.3.0",
+		"globals": "^17.4.0",
 		"jiti": "^2.6.1",
 		"markdownlint-cli2": "^0.21.0",
 		"prettier": "^3.8.1",
