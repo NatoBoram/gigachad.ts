@@ -184,5 +184,6 @@ gh label create docker         --color '#21ceff' --description 'Pull requests th
 gh label create docker_compose --color '#e5f2fc' --description 'Pull requests that update Docker Compose code' --force
 gh label create github_actions --color '#000000' --description 'Pull requests that update GitHub Actions code' --force
 gh label create go             --color '#16e2e2' --description 'Pull requests that update Go code'             --force
+gh label create java           --color '#ffa221' --description 'Pull requests that update Java code'           --force
 gh label create javascript     --color '#168700' --description 'Pull requests that update JavaScript code'     --force
 ```
