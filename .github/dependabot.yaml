@@ -8,6 +8,10 @@ updates:
     commit-message:
       prefix: "⬆️ "
     groups:
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
       patch:
         update-types:
           - patch
@@ -41,6 +45,10 @@ updates:
     commit-message:
       prefix: "⬆️ "
     groups:
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
       actions:
         patterns:
           - actions/*
