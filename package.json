@@ -68,7 +68,7 @@
 		"@eslint/js": "^10.0.1",
 		"@types/node": "^25.5.0",
 		"@typescript/native-preview": "7.0.0-dev.20260323.1",
-		"@vitest/coverage-v8": "4.1.1",
+		"@vitest/coverage-v8": "4.1.2",
 		"eslint": "^10.1.0",
 		"eslint-config-prettier": "^10.1.8",
 		"globals": "^17.4.0",
@@ -78,7 +78,7 @@
 		"typedoc": "^0.28.18",
 		"typescript": "6.0.2",
 		"typescript-eslint": "^8.58.0",
-		"vitest": "^4.1.1"
+		"vitest": "^4.1.2"
 	},
 	"type": "module",
 	"types": "dist/index.d.ts",
