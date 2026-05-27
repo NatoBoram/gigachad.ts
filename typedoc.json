@@ -1,4 +1,11 @@
 {
 	"$schema": "https://typedoc.org/schema.json",
-	"entryPoints": ["./src/index.ts"]
+	"entryPoints": ["./src/index.ts"],
+	"projectDocuments": [
+		"README.md",
+		"CODE_OF_CONDUCT.md",
+		"CONTRIBUTING.md",
+		"LICENSE.txt",
+		"CHANGELOG.md"
+	]
 }
