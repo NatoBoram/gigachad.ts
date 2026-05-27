@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - uses: pnpm/action-setup@v6
         with:
           version: latest
@@ -59,8 +61,6 @@ jobs:
           name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
 
       - run: pnpm publish natoboram-gigachad.ts-*.tgz --access public --no-git-checks --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
       - id: url
         run: echo "url=https://www.npmjs.com/package/@natoboram/gigachad.ts/v/${VERSION#v}" >> "$GITHUB_OUTPUT"
@@ -120,6 +120,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - uses: pnpm/action-setup@v6
         with:
           version: latest
