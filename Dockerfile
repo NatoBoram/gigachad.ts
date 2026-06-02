@@ -1,4 +1,4 @@
-FROM node:25-slim AS base
+FROM node:26-slim AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN apt update && apt install --yes wget && rm -rf /var/lib/apt/lists/*
