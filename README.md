@@ -121,15 +121,16 @@ Start by updating your version number:
 git checkout main
 git pull --autostash --prune --rebase
 
-VERSION=$(pnpm version patch --no-git-tag-version)
-echo $(jq --arg v "${VERSION#v}" '.version = $v' jsr.json) > jsr.json
+VERSION=$(pnpm version patch --json --no-git-tag-version | jq --raw-output '.[0].newVersion')
+TAG="v$VERSION"
+echo $(jq --arg v "$VERSION" '.version = $v' jsr.json) > jsr.json
 pnpm run format
 
-git checkout -b "release/$VERSION"
-git commit --all --message "🔖 $VERSION"
-git push --set-upstream origin "release/$VERSION"
+git checkout -b "release/$TAG"
+git commit --all --message "🔖 $TAG"
+git push --set-upstream origin "release/$TAG"
 
-gh pr create --assignee @me --base main --draft --fill-verbose --head "release/$VERSION" --title "🔖 $VERSION"
+gh pr create --assignee @me --base main --draft --fill-verbose --head "release/$TAG" --title "🔖 $TAG"
 ```
 
 Once your CI passes, merge the pull request, wait for the CI to pass again then push a new tag:
@@ -137,7 +138,7 @@ Once your CI passes, merge the pull request, wait for the CI to pass again then 
 ```sh
 git checkout main
 git pull --autostash --prune --rebase
-git tag "$VERSION" --annotate --message "🔖 $VERSION" --sign
+git tag "$TAG" --annotate --message "🔖 $TAG" --sign
 git push --tags
 ```
 
