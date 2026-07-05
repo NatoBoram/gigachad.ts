@@ -35,6 +35,25 @@ jobs:
           compression-level: 9
           if-no-files-found: error
 
+  attest:
+    permissions:
+      artifact-metadata: write
+      attestations: write
+      id-token: write
+
+    needs: build
+    if: github.actor != 'nektos/act'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: natoboram-gigachad.ts-${{ github.ref_name }}.tgz
+
+      - uses: actions/attest@v4
+        with:
+          subject-path: natoboram-gigachad.ts-*.tgz
+
   publish-npm:
     permissions:
       id-token: write # Add `--provenance`
