@@ -113,9 +113,9 @@ rm -rf .dockerignore .github/workflows/docker.yaml .github/workflows/github-page
 
 ## Publishing
 
-This template offers a GitHub Workflow to help you automatically publish a version to NPM, to GitHub Packages, to GitHub Releases and to JSR on the push of a tag.
+This repository offers a GitHub Workflow to help you automatically publish a version to NPM, GitHub Packages, GitHub Releases and JSR on the push of a tag.
 
-Start by updating your version number:
+Start by updating the version number:
 
 ```sh
 git checkout main
@@ -133,7 +133,7 @@ git push --set-upstream origin "release/$TAG"
 gh pr create --assignee @me --base main --draft --fill-verbose --head "release/$TAG" --title "🔖 $TAG"
 ```
 
-Once your CI passes, merge the pull request, wait for the CI to pass again then push a new tag:
+Once the CI passes, merge the pull request, wait for the CI to pass again then push a new tag:
 
 ```sh
 git checkout main
@@ -142,12 +142,40 @@ git tag "$TAG" --annotate --message "🔖 $TAG" --sign
 git push --tags
 ```
 
-To publish on NPM, you'll need to provide your NPM token.
+### NPM Public Registry
+
+To publish on NPM for the first time, you'll need to provide a NPM token.
 
 1. Sign in to <https://www.npmjs.com>
-2. Access Tokens / Generate New Token / Classic Token / Automation / Generate Token
+2. Access Tokens / Generate New Token
+   - General
+     - Bypass two-factor authentication (2FA)
+   - Packages and scopes
+     - Permissions: Read and write
+     - Select packages: All packages
 3. Create an environment in your repository at `/settings/environments` with the name `npm-public-registry`
 4. Save your new token in the `npm-public-registry` environment in a new secret called `NODE_AUTH_TOKEN`
+5. Modify the job `publish-npm` to add `env: NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}` to the `pnpm publish` step
+
+Once you've published your first version, you'll be able to migrate to [Trusted Publisher](https://docs.npmjs.com/trusted-publishers).
+
+1. Sign in to <https://www.npmjs.com>
+2. Packages / `${name}` / Settings / GitHub Actions
+   - Trusted Publisher
+     - Publisher: GitHub Actions
+     - Organization or user: `${repositoryOwner}`
+     - Repository: `${repositoryName}`
+     - Workflow filename: `pnpm-publish.yaml`
+     - Environment name: `npm-public-registry`
+     - Allowed actions: Allow `pnpm publish`
+   - Package access
+     - Require two-factor authentication and disallow tokens (recommended)
+3. Remove `env: NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}` from the `publish-npm` job
+
+> [!WARNING]
+> If `NODE_AUTH_TOKEN` is set, even to an empty value, then OpenID Connect (OIDC) will not initiate and Trusted Publisher will fail.
+
+## JavaScript Registry
 
 To publish on JSR, you'll need to create a scope and register your package first.
 
