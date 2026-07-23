@@ -1,8 +1,8 @@
-import { default as eslint } from "@eslint/js"
-import { default as prettier } from "eslint-config-prettier"
+import eslint from "@eslint/js"
+import prettier from "eslint-config-prettier"
 import { defineConfig } from "eslint/config"
 import { browser, node } from "globals"
-import { default as tseslint } from "typescript-eslint"
+import tseslint from "typescript-eslint"
 
 export default defineConfig(
 	{
