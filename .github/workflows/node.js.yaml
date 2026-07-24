@@ -55,7 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          persist-credentials: false
+          persist-credentials: true
           ref: ${{ github.head_ref || github.ref }}
       - uses: pnpm/action-setup@v6
         with:
