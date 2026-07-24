@@ -149,6 +149,7 @@ jobs:
           registry-url: https://npm.jsr.io
           scope: "@natoboram"
 
+      - run: pnpm install
       - run: pnpm dlx jsr publish
 
       - id: url
