@@ -79,7 +79,7 @@
 		"typedoc": "^0.28.20",
 		"typescript": "6.0.3",
 		"typescript-eslint": "^8.68.0",
-		"vitest": "^4.1.9"
+		"vitest": "^5.0.0"
 	},
 	"types": "dist/index.d.ts",
 	"module": "dist/index.js"
