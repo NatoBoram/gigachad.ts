@@ -64,6 +64,7 @@ rm -rf .coderabbit.yaml .gemini .github/copilot-instructions.md .github/instruct
 ```sh
 # Command-line interface
 pnpm pkg delete bin scripts.docker scripts.docker:build scripts.docker:kill scripts.docker:run scripts.start
+pnpm pkg set sideEffects=false
 rm -f .dockerignore .github/workflows/docker.yaml Dockerfile src/main.ts
 ```
 
@@ -107,6 +108,7 @@ rm -rf .github/rulesets
 # Run
 pnpm pkg delete bin exports files main module scripts.build scripts.dev scripts.docker scripts.docker:build scripts.docker:kill scripts.docker:run scripts.docs scripts.start types
 pnpm pkg set private=true
+pnpm pkg set sideEffects=false
 pnpm uninstall @typescript/native-preview typedoc
 rm -rf .dockerignore .github/workflows/docker.yaml .github/workflows/github-pages.yaml Dockerfile src/index.ts src/main.ts typedoc.json
 ```
