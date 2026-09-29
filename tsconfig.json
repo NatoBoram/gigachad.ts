@@ -6,7 +6,7 @@
 
 		/* Language and Environment */
 		"target": "ESNext",
-		"lib": ["DOM", "ESNext"],
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
 		"useDefineForClassFields": true,
 		"moduleDetection": "force",
 
