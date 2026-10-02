@@ -6,10 +6,12 @@
 
 		// Included Presets
 		"abandonments:recommended",
+		"schedule:monthly",
 		"security:minimumReleaseAgeNpm",
 
 		// Default Presets
 		":configMigration",
 		":maintainLockFilesMonthly"
-	]
+	],
+	"timezone": "America/Toronto"
 }
