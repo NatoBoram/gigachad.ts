@@ -1,0 +1,17 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		// Full Config Presets
+		"config:recommended",
+
+		// Included Presets
+		"abandonments:recommended",
+		"schedule:monthly",
+		"security:minimumReleaseAgeNpm",
+
+		// Default Presets
+		":configMigration",
+		":maintainLockFilesMonthly"
+	],
+	"timezone": "America/Toronto"
+}
