@@ -2,3 +2,7 @@ arrowParens: avoid
 semi: false
 trailingComma: all
 useTabs: true
+overrides:
+  - files: "*.jsonc"
+    options:
+      trailingComma: none
