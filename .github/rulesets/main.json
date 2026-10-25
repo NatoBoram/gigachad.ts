@@ -35,7 +35,6 @@
 					{ "context": "test", "integration_id": 15368 },
 					{ "context": "docker", "integration_id": 15368 },
 					{ "context": "fix", "integration_id": 15368 },
-					{ "context": "CodeRabbit", "integration_id": 347564 },
 					{ "context": "build_ipfs", "integration_id": 15368 },
 					{ "context": "deploy_ipfs", "integration_id": 15368 },
 					{ "context": "CodeQL", "integration_id": 57789 }
