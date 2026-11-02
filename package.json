@@ -67,19 +67,19 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"@types/node": "^26.6.3",
+		"@types/node": "^26.6.6",
 		"@typescript/native-preview": "7.0.0-dev.20260707.2",
-		"@vitest/coverage-v8": "5.0.2",
+		"@vitest/coverage-v8": "5.0.5",
 		"eslint": "^10.13.0",
 		"eslint-config-prettier": "^10.1.8",
 		"globals": "^17.13.0",
 		"jiti": "^2.7.0",
 		"markdownlint-cli2": "^0.24.0",
-		"prettier": "^3.9.9",
+		"prettier": "^3.9.10",
 		"typedoc": "^0.28.20",
 		"typescript": "6.0.3",
 		"typescript-eslint": "^8.72.1",
-		"vitest": "^5.0.2"
+		"vitest": "^5.0.5"
 	},
 	"types": "dist/index.d.ts",
 	"module": "dist/index.js",
